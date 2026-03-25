@@ -58,6 +58,54 @@ carthaginian_army = {
     }
 }
 
+traits= {
+    "hard_headed" : {
+    "name": "Hard Headed",
+    "description": "+2 Legion Attack, -1 Legion Defense",
+    "effects": {
+        "legion_attack": 2,
+        "legion_defense": -1
+        }
+    },
+
+    "aim_for_the_eye" : {
+        "name": "Aim For the Eye",
+        "description": "+2 Archer Attack, -1 Legion Attack",
+        "effects":{
+            "archer_attack": 2,
+            "legion_attack": -1
+        }
+    },
+
+    "cowboy" : {
+        "name": "Cowboy",
+        "description": "+1 Cavalry Attack, -1 Archer Defense",
+        "effects": {
+            "cavalry_attack": 1,
+            "archer_defense": -1
+        }
+    },
+
+    "slow_and_steady" : {
+        "name": "Slow and Steady",
+        "description": "+ 2 Cavalry Defense, -1 Cavalry Attack",
+        "effects": {
+            "cavalry_defense": 2,
+            "cavalry_attack": -1
+        }
+    },
+
+    "chosen_one" : {
+        "name": "Chosen One",
+        "description": "+4 Legion Attack, -30 Troop Buy Points",
+        "effects": {
+            "legion_attack": 4,
+            "points": -30
+        }
+    }
+}
+
+
 def resolve_combat(attacker, defender):
     attack_value = attacker["attack"]
     defense_value = defender["defense"]
